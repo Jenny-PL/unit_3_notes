@@ -50,17 +50,17 @@ Link CSS sheet to HTML sheet within the `<head>` section.
 
 [More Detailed specificity info](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 ---
-## Flexbox
+## Flexbox: Aligns items within a container 
 
 ---
-## CSS Grid
+## CSS Grid: Creates grid layouts (horiz + vertical containers within a larger container)
 [article with example code + design](https://developer.chrome.com/blog/css-grid/)  
 CSS Grid Rules:
 1.  One large container, called the grid container.
     1.  **Grid container** esignated with CSS rule: `display: grid;`
 2.   "many elements" that make up the grid must be **direct children** of **grid container**
      1.   These items may have children inside (they will not be effected by grid layout)
-
+- See more CSS notes in file: **css-grid.md**
 ```
 .container {
   display: grid;
@@ -75,7 +75,6 @@ Alternately, can lay out row/ columns:
   grid-template: 100px 500px / 200px 100px 50%;
 }
 ```
-**fr** units:  
 
 **Side Note**: Internet Explorer 11 requires specifying the browser prefix `-ms-display: grid;`
 

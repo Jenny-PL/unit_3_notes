@@ -43,7 +43,7 @@ Alternately, can lay out row/ columns:
 ```
 #garden {
   display: grid;
-grid-template-columns: repeat(8, 12.5%)
+grid-template-columns: repeat(8, 12.5%);
   grid-template-rows: 20% 20% 20% 20% 20%;
 }
 ```
