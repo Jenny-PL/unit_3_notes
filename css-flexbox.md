@@ -1,6 +1,8 @@
 # Flexbox
 
-- Works on a selected element
+[cheat sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+- Most of the attributes are given to the parent.
 
 
 ## justify-content: aligns items horizontally

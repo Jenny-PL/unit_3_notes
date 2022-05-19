@@ -1,5 +1,7 @@
 ## CSS Grid
-[article with example code + design](https://developer.chrome.com/blog/css-grid/)  
+[article with example code + design](https://developer.chrome.com/blog/css-grid/)     
+[Grid cheat sheet ](https://css-tricks.com/snippets/css/complete-guide-grid/)   
+
 CSS Grid Rules:
 1.  One large container, called the grid container.
     1.  **Grid container** esignated with CSS rule: `display: grid;`
