@@ -49,3 +49,33 @@ Link CSS sheet to HTML sheet within the `<head>` section.
 <mark>id > class > type-selector (ie- p, section) </mark> 
 
 [More Detailed specificity info](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+---
+## Flexbox
+
+---
+## CSS Grid
+[article with example code + design](https://developer.chrome.com/blog/css-grid/)  
+CSS Grid Rules:
+1.  One large container, called the grid container.
+    1.  **Grid container** esignated with CSS rule: `display: grid;`
+2.   "many elements" that make up the grid must be **direct children** of **grid container**
+     1.   These items may have children inside (they will not be effected by grid layout)
+
+```
+.container {
+  display: grid;
+  grid-template-columns: 200px 100px 50%;
+  grid-template-rows: 100px 500px;
+}
+```
+Alternately, can lay out row/ columns:
+```
+.container {
+  display: grid;
+  grid-template: 100px 500px / 200px 100px 50%;
+}
+```
+**fr** units:  
+
+**Side Note**: Internet Explorer 11 requires specifying the browser prefix `-ms-display: grid;`
+
