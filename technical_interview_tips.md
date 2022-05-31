@@ -1,5 +1,31 @@
-#Technical interviews
+# Technical interviews
+## Big take away:
+- Don't just right in!
+- Don't code silently!
+- Treat your interviewer as a potential co-worker// ask if there's annything you're missing at the beginning// ask for help if you're stuck
 
+---
+- Be clear in what you know and don't know.
+- Treat interviewer as a coworker. Ask a Q if you're stuck.
+- Take a minute to process the Q.
+- Give exmpale input/out to confirm this what is should do.
+  - Use assert statement as a way to test your code (TDD)
+- Come up with some edge cases
+- Ask: "Before I start writing my code, is there anything else that I should consider?"; "Do you think there is anything that I am missing?"
+- Pseudocode the steps
+- Check in as you go... how does this approach seam to you?
+- May have a Q about time/space complexity & how to improve your code
+---
+- If an interviewer gives you a tip, accept their tip
+- **Read error message aloud**
+- Can ask at the beginning: "Do I need to worry about validation? Or should I assume valid input?"
+- Solve meat of the problem first; can leave comments at start that you would validate, and go back to code that if you have time.
+- Time/space complexity- will likely be asked about this
+- If you don't know where to start... try it out without code first
+- **repl.it** has a debugger
+
+
+---
 - Start of by making sure you understand the Q
 - Make some more examples of inputs/outputs, check with interviewer if they are correct
 - Once verbally state your idea check if you're good to start coding the soution
