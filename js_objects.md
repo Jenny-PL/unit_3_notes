@@ -1,5 +1,6 @@
 # Objects
-This is the same idea as dictionaries in python.  
+This is the same idea as dictionaries in python.    
+
 Example:
 
 ```

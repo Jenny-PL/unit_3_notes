@@ -1,6 +1,6 @@
-#JavaScript
+# JavaScript
 
-# Functions
+## Functions
 
 **Note**: Javascript will let you not put in required parameters without throwing an error.  Istead those variables within the function will be 'undefined'.
 
@@ -58,8 +58,17 @@ Same as above, but use `const` in place of `let`.
 Discouraged; out of fashion to use.
 - If defined within a function, it will have scope throughout the entire function. If defined outside a function it will have global scope (aka not block scope)
 
-# Some Learning Resources:
+## Template literals (aka string interpolation)
+Use backticks and ${} for interpolation... similar to f-strings in Python
+```
+const name = "Xinting";
+console.log(`Hi ${name}! How's it going?`);
+//ouptut: Hi Xinting! How's it going?
+```
+
+## Some Learning Resources:
 - [You don't know JS Yet](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20%26%20going/ch1.md)  
 - [WesBos JS instruction](https://wesbos.com/javascript)  
 - [YouTubeChannel- fun fun function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)
 - [CodeCademy](https://www.codecademy.com/learn/introduction-to-javascript)
+
