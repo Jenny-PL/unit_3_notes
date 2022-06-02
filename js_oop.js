@@ -67,11 +67,27 @@ class Shape {
   }
 
   calcPerimeter() {
-    console.log(`${this.side * this.sideLength}`);
+    console.log(
+      `This is the perimter of the ${this.name}: ${this.side * this.sideLength}`
+    );
   }
 }
-const square = new Shape("square", 4, 5);
-square.calcPerimeter();
+// const square = new Shape("square", 4, 5);
+// square.calcPerimeter();
 
 const triangle = new Shape("triangle", 3, 3);
 triangle.calcPerimeter();
+
+class Square extends Shape {
+  constructor(name = "square", side = 4, sideLength) {
+    super(side, sideLength);
+    this.name = name;
+  }
+
+  calcArea() {
+    console.log(`This is the area of this square: ${sideLength * sideLength}`);
+  }
+}
+
+const square = new Square(6);
+square.calcArea();

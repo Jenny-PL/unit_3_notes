@@ -56,3 +56,13 @@ Or a mixed approach is ok (however, generally, strive for consistency):
 
 ---
 **Note**: Functions are treated as **objects**.  They have some key-value pairs, including a **name**: function name, 
+
+Object literal for a school that is a non-profit, in a basement, that opens at 9 and closes at 5:
+```
+let school = {
+  status: 'non-profit',
+  location: 'basement',
+  open-time: 9,
+  close-time: 5
+}
+```

@@ -40,7 +40,42 @@ increaseQuantity(5);
 - Proactively guard against bugs with scope and hoisting (?)
 - Sets up good habits for more advanced JavaScript syntax
 
+## Anonymous functions
+- similar idea to lambda functions
+- not named; not re-usable
+- Can make your code more readable... shows exactly whats happening when iterating over a list with **forEach loop** or **map() function**.
 
+Syntax:
+```
+function () {
+    console.log(`My jelly bean guess is ${Math.floor(random.Math()*50)}`;
+    }
+```
+- To invoke this function, wrap it in parathensis and place closed parathensis after it.  It is unlikely we'd want to do this... more likely, function will be called within a forEach loop, map(), or reduce().
+```
+(function () {
+    console.log(`My jelly bean guess is ${Math.floor(random.Math()*50)}`;
+    })();
+```
+
+**With arrow syntax**:
+```
+() => console.log(`My jelly bean guess is ${Math.floor(random.Math()*50)}`;
+```
+
+**Example use of anonymous Fx with forEach loop:**
+```
+const cashTips = [4, 7, 9, 12, 3, 18, 6];
+let sum = 0;
+
+cashTips.forEach((tip) => {
+  sum += tip;
+});
+
+const average = sum / cashTips.length;
+console.log(`The average cash tip is ${average}`);
+```
+    
 # Variables
 ## let 
 `let food;`   // declaration of variable  
