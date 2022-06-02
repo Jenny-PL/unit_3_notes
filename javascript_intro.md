@@ -100,6 +100,13 @@ const name = "Xinting";
 console.log(`Hi ${name}! How's it going?`);
 //ouptut: Hi Xinting! How's it going?
 ```
+## truthy & falsy
+- falsy
+  -  0, '', NaN, false, null, undefined
+  -  empty string evalutes to falsy
+-  truthy
+   -  {}, [], 1, true, 
+   -  Note: empty object and empty list both evaluate to truthy
 
 ## Some Learning Resources:
 - [You don't know JS Yet](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20%26%20going/ch1.md)  

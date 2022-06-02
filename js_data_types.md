@@ -58,6 +58,8 @@ console.log(a != b)
 
 - `!==` means the values are **not** `===`
 - `!=` means the values **are not** `==` 
+
+## ternary operator: ?**
   
 ## More info:
 [codecademy documentation](https://www.codecademy.com/resources/docs/javascript)

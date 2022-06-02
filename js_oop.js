@@ -79,15 +79,18 @@ const triangle = new Shape("triangle", 3, 3);
 triangle.calcPerimeter();
 
 class Square extends Shape {
-  constructor(name = "square", side = 4, sideLength) {
-    super(side, sideLength);
-    this.name = name;
+  constructor(name, side, sideLength) {
+    super(name, side, sideLength);
+    this.name = "square";
+    this.side = 4;
   }
 
   calcArea() {
-    console.log(`This is the area of this square: ${sideLength * sideLength}`);
+    console.log(
+      `This is the area of this square: ${this.sideLength * this.sideLength}`
+    );
   }
 }
 
-const square = new Square(6);
+const square = new Square(undefined, undefined, 6);
 square.calcArea();
