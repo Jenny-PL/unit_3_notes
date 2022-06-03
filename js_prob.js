@@ -26,3 +26,28 @@
 //   }
 //   return false;
 // };
+
+let tool_list = [
+  {
+    name: "Hammer",
+    quantity: 35,
+  },
+  {
+    name: "Axe",
+    quantity: 18,
+  },
+  {
+    name: "Bow",
+    quantity: 17,
+  },
+];
+
+const formatToolList = (toolsData) => {
+  let msg = "Tool List:\n";
+  for (let tool of toolsData) {
+    msg += `Tool: ${tool.name}\nQuantity: ${tool["quantity"]}\nReserve Now!\nDonate Tool!\n---\n`;
+  }
+  return msg;
+};
+
+console.log(formatToolList(tool_list));

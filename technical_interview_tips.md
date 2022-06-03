@@ -48,3 +48,29 @@ The find() method is almost the same as the **index()** method, the only differe
 - How do Ada values manifest on your team/in your company?
 - What do you like best about working this job?
 - How does the team work together? support eachother?
+
+
+## How to practice for interviews:
+- Re-do past PSEs with a timer.
+- Explain the code to someoone else.
+## Some fun ways to practice coding (not for interviews):
+- https://glitch.com/
+- Make a vision board (example place to do this: https://www.are.na/)
+- [The missing semester of your CS Education](https://missing.csail.mit.edu/)
+
+## If you're going to do leetcode:
+Not sure where to start with Leetcode?
+Here are some problems that we think are good places to start.
+Remove Element
+Largest 3 Same Digit Number in a String
+Check If All As Appear After All Bs
+Check If All Characters Have Equal Number of Occurrences
+Maximum Number of Balls In A Box
+
+## Not sure where to start with advanced Python topics?  Here are some topics that we think are good places to start.
+Map Function
+Using *args and **kwargs**
+List Comprehension
+Nested List Comprehension
+Lambda Functions
+
