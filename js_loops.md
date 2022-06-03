@@ -149,19 +149,29 @@ Another example:
 ```
 const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
 
-const secretMessage = animals.map(animals => {
-  for (animal of animals) {
-    return animal[0];
-  }
-});
+const secretMessage = animals.map(animal => {
+   return animal[0];
+   });
 
 console.log(secretMessage.join('')); //output: HelloWorld
 ```
-
-## .filter()
+A diff example:
+```
+const bigNumbers = [100, 200, 300, 400, 500];
+const smallNumbers = bigNumbers.map(bigNum =>{
+    return bigNum/100;
+  });
+console.log(smallNumbers);  //output: [ 1, 2, 3, 4, 5 ]
 
 ```
-onst things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
+
+## .filter()
+**Returns a NEW array... altered from original as it takes out selected elements**
+1. instantantiate a new variable, with let or const
+2. assign that variable to oldArray.filter()
+3. add a function with conditional to be applied to each item in array
+```
+const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
 
 const onlyNumbers = things.filter(thing => {
   return typeof thing === 'number';
@@ -170,4 +180,14 @@ const onlyNumbers = things.filter(thing => {
 console.log(onlyNumbers);
 
 //output: [ 5, 3.14, 100 ]
+```
+Another example:
+```
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+const smallNumbers = randomNumbers.filter(num => {
+  return num <250;
+});
+
+console.log(smallNumbers); //Output:[ 200, 3.14, 7, 13 ]
 ```

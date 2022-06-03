@@ -28,3 +28,31 @@ let v2 = "friend";
 
 let new_func = closure_func(v1, v2);
 new_func();
+
+// Functions from TDD Learn lesson:
+const formatToolList = (toolsData) => {
+  let msg = "Tool List:";
+  for (let tool of toolsData) {
+    msg += `\nTool: ${tool["name"]}\nQuantity: ${tool["quantity"]}\nReserve Now!\nDonate Tool!\n---`;
+  }
+  return msg;
+};
+
+const formatReservations = (resObj) => {
+  let msg = `Reservations for ${resObj.tool}:`;
+  for (let res of resObj["reservations"]) {
+    msg += `\n- Return Date: ${res.returnDate}`;
+  }
+  return msg;
+};
+
+const formatLibrary = (toolList) => {
+  let msg = "Tool Library:";
+  let count = 1;
+  for (tool of toolList) {
+    let avail = tool.totalQuantity - tool["reservations"].length;
+    msg += `\n${count}. ${tool.name} (Available: ${avail})`;
+    count += 1;
+  }
+  return msg;
+};

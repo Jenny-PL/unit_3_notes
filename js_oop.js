@@ -94,3 +94,31 @@ class Square extends Shape {
 
 const square = new Square(undefined, undefined, 6);
 square.calcArea();
+
+// OOP practice from TDD Learn lesson
+class Tool {
+  constructor(name, quantity, reservations) {
+    this.name = name;
+    this.quantity = quantity;
+    this.reservations = reservations;
+  }
+  render() {
+    return `Tool: ${this.name}\nQuantity: ${this.quantity}`;
+  }
+}
+
+// still getting errors on below prob from Tool Library Wave 2 prob#3:
+class ToolLibrary extends Tool {
+  constructor(tools) {
+    super(name, quantity, reservations);
+    this.tools = tools;
+  }
+
+  listTools() {
+    let msg = "Tool List:";
+    for (let tool of this.tools) {
+      msg += `\nTool: ${tool.name}\nQuantity: ${tool.quantity}\nReserve Now!\nDonate Tool!`;
+    }
+    return msg;
+  }
+}
