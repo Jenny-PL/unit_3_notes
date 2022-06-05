@@ -53,7 +53,7 @@ def sort_by_length(sentence):
         i += 1
     return wordList
 ```
-More generic example: 
+More generic insertion sort example: 
 ```
 def insertion_sort(array):
     i = 1
@@ -67,11 +67,42 @@ def insertion_sort(array):
             j -= 1
         array[j] = to_insert
         i += 1
+    return array # I added this... correct?
 ```
+**In my own words... insertion sort**:  
+Insertion sort algorithm:
+- Makes a list.
+- sets index of i = 1
+- as long as index is less than length(list), go into the loop: 
+  - set item_to_insert equal to list[i].  This is the item that you'll be working to insert into the correct spot. 
+  - set another index, j, equal to i:
+  - j will be the index of the list item that will be compared to item_to_insert.  
+  - j will be decremented  until (item[j-1]) < item_to_insert
+  - this is the location where item_to_insert will be inserted: 
+  - list[j] = item_to_insert
+- now index i will be incremented (i+= 1), to move the index up one and begin to sort the next item in the list... comparing it against list[j] until we find the correct spot to insert.
 
 ---
 **bubble sort**
 1. selection sort
-
+2. 
+---
 **O(n log(n)) algorithms**:
-- merge sort
+Some O(n log(n)) algorithms are: merge sort, quick sort, and heap sort.
+**merge sort**  
+Steps:
+1. Divide the array into two sub-arrays repeatedly until each sub-array is of size one.
+2. Sort each sub-array. (An array of size one is sorted by default.)
+3. Merge the sub-arrays into one array by combining two sub-arrays into one at each step.  
+   
+**Merge sort: is it a stable algorithm?**
+- Answer: Yes, it can be!  
+- If we encounter two equivalent values during the merge phase, one from the left and one from the right, we need only prefer the value from the left. As long as we do this all the way up through the merging, we will preserve the relative ordering required for a stable sort.
+
+**In my own words... merge sort**:  
+Merge sort algorithm:
+- Uses recursion
+- splits the original array into a bunch of arrays until get down to the **recursive base case, which is all the items are in their own arrays of length 1.**
+- Now rebuilds the arrays, comparing the first index of each array as it rebuilds, using an auxillary array to dictate the length. (ie- goes from arrays of len() of 1 each, to sorted arrays of len() of 2 each).
+- keep re-building into larger arrays, always only having to look at the first index (then i+1, after list[i] is added to the auxillary list)of the build-block arrays.
+- finally, have a fully sorted array of the original length. 
