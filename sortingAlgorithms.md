@@ -4,7 +4,8 @@
 - In-place sorting saves on space, but may take more time, and ends up modifying the initial list.
 - If you don't want to modify original list, need to make a copy or use strategy that returns a new copy  
   
-**stable**: A sorting algorithm is stable if it guarantees that the relative ordering of two values having the same sort key is the same after the sort as it was before the sort.
+**stable**:  Equivalent items wont swap places!
+- stable = relative ordering of two values having the same sort key is the same after the sort as it was before the sort.
 - allows for sorting by an arbitrary number of attributes
 - example: you can sort by both age, and name. (sort by name first... then sort by age... this will result in a list ordered by age, however in case of tie, sorted by name)
 
@@ -106,3 +107,35 @@ Merge sort algorithm:
 - Now rebuilds the arrays, comparing the first index of each array as it rebuilds, using an auxillary array to dictate the length. (ie- goes from arrays of len() of 1 each, to sorted arrays of len() of 2 each).
 - keep re-building into larger arrays, always only having to look at the first index (then i+1, after list[i] is added to the auxillary list)of the build-block arrays.
 - finally, have a fully sorted array of the original length. 
+
+**Merge sort example code**:
+```
+def merge_sort(data):
+    if len(data) < 2:
+        print("this is the base case return: ", data)
+        return data
+    midpoint = len(data) // 2
+    print("data before sorting: ", data)
+    left_sorted = merge_sort(data[:midpoint])
+    right_sorted = merge_sort(data[midpoint:])
+    full_sorted = []
+    i = 0
+    j = 0
+    print("left sorted: ", left_sorted)
+    print("right sorted: ", right_sorted)
+    while i < len(left_sorted) and j < len(right_sorted):
+        if left_sorted[i] < right_sorted[j]:
+            full_sorted.append(left_sorted[i])
+            i += 1
+        else:
+            full_sorted.append(right_sorted[j])
+            j += 1
+    full_sorted.extend(left_sorted[i:])
+    full_sorted.extend(right_sorted[j:])
+    print("full sorted: ", full_sorted)
+    return full_sorted
+
+
+data = [2, 3, 7, 8, 1, 3, 9, 4, 2, 0, 1]
+print(merge_sort(data))
+```
