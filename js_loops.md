@@ -1,6 +1,9 @@
 # Loops & iterators
 [codecademy loops cheatsheet](https://www.codecademy.com/learn/paths/introduction-to-javascript/tracks/introduction-to-javascript/modules/learn-javascript-loops/cheatsheet)  
-[Turing School JS loops practice](https://frontend.turing.edu/lessons/module-1/js-for-loops.html)
+
+[Turing School JS loops practice](https://frontend.turing.edu/lessons/module-1/js-for-loops.html)  
+
+[MDN documentation loop tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
 
 ## for loop:
 syntax:   

@@ -1,0 +1,26 @@
+body {
+    font-style: open sans;
+    color: #1F4690;
+    background-color: #F2D1D1;
+    margin: 10vw;
+}
+
+h1 {
+    background-color: #F9F9F9;
+    padding: 3vh;
+}
+
+ul {
+    background-color: #DAEAF1;
+    list-style-type:decimal;
+}
+
+li {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+img {
+    /* width: 60vw;
+    height: 100% */
+}
