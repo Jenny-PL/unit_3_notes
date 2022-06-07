@@ -4,7 +4,7 @@
 [REPLit with Ex code for these notes](https://replit.com/@JennyPL/Foreshadowing-State-Demo#scripts/index.js) 
 
 **Events**: Can be user initiated (ex- click on button) or some external stimuli (ex- message received)
-- Some examples: long click, scroll, hover   
+- Some event examples: long click, scroll, hover   
 - To **fire/trigger/send** an event, you are initializing the process to run the code to handle the event
 - To **listen to/handle/recieve** the event, you are making the response occur
 - events happen an **html element** (ex: `<img>, <p>, <button>` tags)
@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", registerEventHandlers);
 We need to ask our document to wait and register the event handlers after the DOM has been completely loaded. This is because the JavaScript file often loads faster than the DOM does!  
 
 4. **Getting info about specific events:**
-   1. Each descrete event (ex- each 'click') is an object.
+   1. Each discrete event (ex- each 'click') is an object.
    2. You can get info about those specific events.
    3. For example, **add event parameter** into addCrab and registerEventHandlers functions, then you can:
-      1. Add pring statements into the functions to see whats happing
+      1. Add print statements into the functions to see whats happening
  ```
  //console output:
  //console.log('in event: ', event)
