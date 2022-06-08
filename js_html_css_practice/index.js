@@ -10,8 +10,7 @@ const state = {
 const addBook = (event) => {
   console.log("in addBook:", event);
   const newBook = document.createElement("li");
-  newBook.textcontent =
-    "Stand in for a book. Learn to print user input please!";
+  newBook.textContent = document.getElementById("bookTitle").value;
   const bookList = document.getElementsByTagName("ul")[0];
   bookList.appendChild(newBook);
   updateNewBookCount();
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", registerEventHandlers);
 //This text updates every time the "Add Thing" button is clicked
 
 const updateNewBookCount = () => {
-  newBookCount += 1;
+  state.newBookCount += 1;
   const bookCounterElement = document.querySelector("#newBookCount");
   bookCounterElement.textContent = `New Books read: ${state.newBookCount}`;
 };
