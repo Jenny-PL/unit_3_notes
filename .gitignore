@@ -7,6 +7,6 @@ devOps_panel.md
 bio_poem.md
 
 .env
-
+node_modules
 
 API_KEY = pk.708deae780d492bfa2933aa9e334cfec 
