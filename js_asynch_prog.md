@@ -120,6 +120,8 @@ axios
 
 
   ## Alternative option for writing async code (without axios), using modern JS
+  **Await can only be used in a function labeled async**  
+  JS is rewriting this behind the scenes, using promises (ie- with .then() and .catch() )
 
   ```
   const makeApiCallUsingAsync = async () => {
@@ -133,7 +135,7 @@ axios
     }
   };
   ```
-
+---
 
 Example of managing an API call that depends on another API call:
 ```
@@ -183,4 +185,78 @@ const findLocation = (latitude, longitude) => {
 }
 
 findLatitudeAndLongitude('Seattle, Washington, USA');
+```
+
+---
+## Promises
+Promise: A **wrapper** for some asynchronous code
+- A promise starts as pending.... it is either fulfilled, or rejected.
+- Once a promise is fulfilled or rejected, it can't be changed. 
+- fulfilled will trigger actions in `.then()`
+- rejected will trigger actions in `.catch()`
+
+```
+const myPromse = new Promise(resolve, reject) => {
+  //do something async!
+  Call resolve OR reject
+   call resolve(someValue)  <- changes the promise to fulfilled
+  OR
+    call reject("failure message") <- changes the promise to rejected
+}
+```
+Example:
+```
+const promise1 = new Promise((resolve,reject) => {
+    const otters= "THe Best class";
+    resolve(otters);
+    reject(otters); //this will not run, because resolve() already ran!
+    console.log(`Yay! Otters!`);
+})
+.then((response) => {
+    console.log('HELLO');
+    console.log(response);
+})
+.catch((error) => {
+    console.log('ERROR ERROR');}
+       ) 
+```
+
+**What is resolve/reject?**
+resolve is a function that our async code calls to resolve the promise and set it to fulfilled.  The value that we pass to resolve will be passed to the function we attached with .then().
+reject is a function that our async code calls to resolve the promise and set it to rejected.  The value that we pass to reject will be passed to the attached with the .catch()
+
+resolve and reject are functions that the promise object provides for us.  Our async code MUST call one of these at some point, or the promsie will be pending forever.
+
+**A race condition**:  
+
+**setTimeout**
+
+
+## Some more examples:
+Making a get request within a get request:
+```
+const axios = require("axios");
+const API = "https://pokeapi.co/api/v2/pokemon"
+
+const myPromise = new Promise((resolve, reject) => {
+    axios.get(`${API}/squirtle`)
+    .then((response) => {
+        console.log(`squirtle's id is:`, response.data.id);
+        const sqID = response.data.id;
+
+        //now use code to get the next Pokemen, by id #
+        axios.get(`${API}/${sqID+1}`)
+        .then((response) => {
+            console.log(response.data.id);
+            console.log(`The next pokemon is: ${response.data.name}`)
+            })
+        .catch((error) => {
+            console.log("That didnt work out");
+        })
+    })
+    .catch((error) => {
+        console.log("This is a error");
+        console.log(error);
+    })
+})
 ```
