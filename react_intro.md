@@ -74,9 +74,20 @@ How to use a component:
       2. Within this folder, each component should have it's own file, with a name matching the component name (ex: `src/components/StudentList.js`)
    2. Import React, and other dependencies
    3. create a function
+      1. In order for the function to return **just one JSX object**, the JSX elements must be wrapped in one larger object (ex: `<section></section>`)
    4. export the component
 3.  **Render the compnent at least 1x**
     1.  At the top of `App.js`, add import statement referring to file defining the component:
         1. `import StudentList from "./components/StudentList";`
      1. To render the component: 
         1. Include the component in any JSX object, using: `<ComponentName></ComponentName>`, or in this example: **`<StudentList></StudentList>`**
+
+## Styling components
+1. Make a new CSS file for each component
+   1. Recommendation: keep CSS files in src/components
+   2. Name CSS file to match Component file name, ex:
+      1. `StudentList.css`
+   3. Linke CSS file to **component file**:
+      1. Add import statement at top of component file, ex:
+      2. `import './StudentList.css';`
+   4. When adding class selectors attributes to html elements, we must use **className**; in the CSS file, still use `.className` to select that element
