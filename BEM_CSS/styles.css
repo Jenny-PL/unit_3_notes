@@ -1,0 +1,25 @@
+body {
+    background-color: aquamarine;
+}
+
+
+.btn btn--big btn--orange {
+background-color: orange;
+border: solid 5px blue;
+}
+
+/* Element that depends upon the block */ 
+.btn__text {
+    color: purple;
+}
+
+/* Modifier that changes the style of the block */
+
+.btn {}
+
+/* Element that depends upon the block */ 
+.btn__price {}
+
+/* Modifier that changes the style of the block */
+.btn--orange {} 
+.btn--big {}
