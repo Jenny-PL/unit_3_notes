@@ -1,9 +1,17 @@
 # React
 
+**React** is a JS open source librar
+
+**why is React nice?**
+- Teamwork: Diff ppl can work on diff components... helps to share the workload and keep the code separate
+- Interactive UI (<mark>per class notes, no more event listeneters...?</mark>)
+- Virtual DOMs.... Are speedy (<mark>what is a virtual DOM?</mark>)
+---
 React organizes JS into similar items, to make code DRYer, easier to organize and maintain. 
 
 These items are called **components**, and they are based on UI elements.  
 - Components may contain: Styles, Complex logic, Data, State, & Event-handling
+---
 
 [documentation for creating react app](https://create-react-app.dev/docs/getting-started/)   
 
@@ -11,9 +19,10 @@ Steps to starting a react project:
 1. `yarn create react-app app-name` 
 2. then to access the app folders:
 3. `cd app-name`
-4. To start a server: ` yarn start`
-5. By default, our front-end is viewable at **localhost:3000**
-6. Note:
+4. `yarn install` ? install dependencies
+5. To start a server: ` yarn start`
+6. By default, our front-end is viewable at **localhost:3000**
+7. Note:
    1. Because React tries to autoload our app When it notes changes, and because VSCode automatically saves changes while we're working... our app can try to load while we're writing code... thus breaking it!
    2.  working with React, or other autoloading programs, it's best to disable the VSCode autosave feature. 
    3.  **Under the File menu, simply uncheck Auto Save!**
@@ -38,12 +47,12 @@ Steps to starting a react project:
 └── yarn.lock
 ```
 
-## JSX (JavaScript syntax extension)
+## JSX (JavaScript Syntax Extension)
 - html-like javascipt
 - A few differences: 
   - certain things have slightly diff names (ie class becomes className)
-  ```
-  <header className="App-header"></header>
+```
+<header className="App-header"></header>
 ```
   - components are named with uppercase letter!
   - must use correct syntax
@@ -76,7 +85,7 @@ How to use a component:
    3. create a function
       1. In order for the function to return **just one JSX object**, the JSX elements must be wrapped in one larger object (ex: `<section></section>`)
    4. export the component
-3.  **Render the compnent at least 1x**
+3.  **Render the component at least 1x**
     1.  At the top of `App.js`, add import statement referring to file defining the component:
         1. `import StudentList from "./components/StudentList";`
      1. To render the component: 
