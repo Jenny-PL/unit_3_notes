@@ -93,6 +93,72 @@ Hoisting: JS interpreter appears to move declaration of functions to top of the 
   - why could this be useful? You can organize your code with all the function calls on top, and logic below.
 - Variable hoisting and class hoisting: avoid!
   - For example, if you use `var num;` num can be hoisted
+---
+**Boostrap** (Nina)
+- Pros: Saves time, responsive, compatable with various browers, consistent design, open source
+- Cons: May look boring/similar to other sites, may require a lot of overrides
+- Bootstrap 5: most current version
+  - Place link tag in the `<head>` tag and `<script>` tag for JS bundle before closing 
+- Bootstrap **Themes**: packages of HTML/CSS/JS that provide syling, UI components, and page layouts
+- If using with react, need to add **React-Bootstrap** package
+
+---
+**Kubernetes** (Roshni)
+- Open source, developed by Google
+- Software that managed containers... allows 
+- When run Kubernetes, you get clusters ... nodes... ?
+- load balancing, self-healing, secret&config mngmt
+- often used with Docker
+---
+**Docker** (Joanna)  
+Docker deploys applications
+- packages software into containers, with dependencies included
+- Helps to deploy/scale applications
+- Important for DevOps
+---
+**NoSql Databases** (Diana)
+- SQL DBs uses tabular design, which doesn't alwasy scale well
+- Various options: key-value, column-family, graph, document
+- One NOSQL option: **Firebase** (supports Java, JS, objective C)
+  - subscription based ($?)
+  - small-scale apps
+  - Bypasses the backend (no HTTP requests)
+  - Real-time
+  - Read using listeners
+- Another option: **MongoDB**
+  - open source (free)
+  - supports C, C#, Java, ...
+---
+**ASCII vs Unicode** (Ada)  
+Character encoding:  each character is attached to specific #s (that translate into binary code)  
+**ASCII**:  American Standard Code for Information Exchange.  Only accounted for English language.  8-bit standard.  
+**Unicode**:   aka Universal Coded Character Set.  It can be up to 32-bits.  Contains characters from most written languages, emojis, etc.
+
+---
+**Functional Programming (vs. imperative Programming)** (Tori)
+
+**Functional Programming**:   
+  - **F#, clojure, erland, haskell**: func programming languages
+- variables and functions are the core blocks rather than objects/methods
+- Pure functions: create no side effects, always give same output with save input
+- Avoid loops/ if...else statements; use recursion instead
+- First-class functions: functions can be used as a variable
+- Higher order functions:
+- functional composition  
+**vs**  
+**imperative programming**:
+- Step by step
+- State changes are important
+- primary flow control: loops, conditionals, etc\
+---
+**Microservices Architecture** (Liquing)  
+- **Monolithic applications** group all components (UI, DB, Business logic) together
+  - Everyone is using the same technologies
+- **Microservices**: divides components of code base into sets of similar processes
+  - Allows different services to use diff technologies and scale
+  - Cons: several diff technologies to integrate/requires stronger deployment skills.
+---
+
 
 
 

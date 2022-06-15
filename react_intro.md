@@ -100,3 +100,67 @@ How to use a component:
       1. Add import statement at top of component file, ex:
       2. `import './StudentList.css';`
    4. When adding class selectors attributes to html elements, we must use **className**; in the CSS file, still use `.className` to select that element
+---
+## Components as Presentational or Container Components
+
+**Presentational Components**: job is to display data  
+
+**Container Components**: Use presentational components. Hold, manage, modify data. Send data to presentational components.
+   - **Presentational components** are often nested inside container components.
+
+---
+## Props
+- Read-only (cannot be modified)
+- Props are name-value pairs
+  - Values of props can be any data type, including other components or functions
+
+General example:
+```
+import ComponentB from './ComponentB';
+
+const ComponentA = () => {
+  return <ComponentB varName="value goes here"></ComponentB>;
+};
+
+export default ComponentA;
+```
+
+
+Example of passing several values into prop named Library:
+```
+const Library = () => {
+  return (
+    <div>
+      <Book title="Hello Web App" author="Tracy Osborn" isbn="978-0986365911"></Book>
+      <Book title="JavaScript Cookbook" author="Shelley Powers" isbn="9781491901885"></Book>
+    </div>
+  );
+};
+```
+
+
+```
+const ComponentB = (props) => {
+  return <div>The value of varName: {props.varName}</div>;
+};
+```
+or Instead of props.varName, we could alternatively use `props["varName"]`
+
+```
+const Student = (props) => {
+  return (
+    <ul>
+      {/* alternate ways to access property value: */}
+      <li>Nickname: {props.name}</li>
+      <li>Email: {props["email"]} </li>
+    </ul>
+  );
+};
+
+export default Student;
+```
+## PropTypes
+1. Import PropTypes into our component file
+2. Attach a propTypes member to our component function
+3. Assign an object to the propTypes member, where each key-value pair in the object is a prop name and a validator
+
