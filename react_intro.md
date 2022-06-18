@@ -164,3 +164,19 @@ export default Student;
 2. Attach a propTypes member to our component function
 3. Assign an object to the propTypes member, where each key-value pair in the object is a prop name and a validator
 
+```
+import PropTypes from 'prop-types';
+
+const ComponentA = (props) => {
+    return (
+        <span>{props.title}</span>
+    );
+};
+
+ComponentA.propTypes = {
+    title: PropTypes.string.isRequired,
+    operate: PropTypes.func
+};
+
+export default ComponentA;
+```
