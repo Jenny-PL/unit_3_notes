@@ -1,5 +1,6 @@
 # OOP in JavaScript
 [Intro to OOP in MDN](https://developer.mozilla.org/en-US/docs/learn/javascript/objects/classes_in_javascript)
+- <mark>Also see notes: js_objects.md </mark>
 
 
 Basic example of a class constructor:

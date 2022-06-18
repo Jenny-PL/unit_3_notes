@@ -52,6 +52,7 @@ In conditional statements,
       - `Math.floor()`: takes a decimal number, and rounds **down** to the nearest whole number. (`Math.ceil()` will find the nearest integer >= to the number)
       - `Math.trunc()`: removes decimals; returns the integer only
 ---
+## Type check
 To check type in JavaScript use `typeof`:
 - Example: `console.log(typeof 41.1);`
 - output: `number`
@@ -105,6 +106,7 @@ An example:
 const allowed = (age > 18) ? 'yes' : 'no';
 ```
 In above example, if `(age >18)` evaluates to `true`, the ternary expression evaluates to `yes`....  `(age >18)`  evaluates to `false` the ternary expression evaluates to `no`
+
 ---
 ## switch statement: can be helpful if lots of case options
 ```
