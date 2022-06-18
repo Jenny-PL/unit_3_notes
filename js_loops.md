@@ -5,11 +5,15 @@
 
 [MDN documentation loop tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
 
+---
+
 ## for loop:
 syntax:   
-**for (initiaize variable; conditional; re-assign) {  
+```
+for (initiaize variable; conditional; re-assign) {  
         while conditions are met, do this code;  
-        }**
+        }
+```
 
 3 expressions with iterator variable that usually appears in each expressions:
   1. The iterator variable is initialized
@@ -22,8 +26,9 @@ Example:
 for (let num = 5;  num < 11; num ++) {
   console.log(num);
 }
+// ouptput: 5 6 7 8 9 10
 ```
-
+---
 ## for loop with .length
 ```
 const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion'];
@@ -31,7 +36,7 @@ for (let i = 0; i < animals.length; i++){
   console.log(animals[i]);
 }
 ```
-
+---
 ## nested for loops
 - For each element in the outer loop array (obsFollowers below) the inner loop will run in its entirety:  
 
@@ -81,7 +86,7 @@ while (currentCard !== 'spade') {
 // to iterate through the loop, currentCard is re-assigned with cards[Math.floor(Math.random() * 4)]
 
 ```
-
+---
 ## do ... while... loops
 
 you want a piece of code to **run at least once** and then loop based on a specific condition after its initial run
@@ -113,6 +118,63 @@ console.log("skipping the melon.")
 // output: apple orange papaya skipping the melon.
 ```
 ---
+## for-of loops
+```
+for (let/const variable of iterable) {
+  // do something with value
+}
+```
+```
+const array1 = ['a', 'b', 'c'];
+
+for (const element of array1) {
+  console.log(element+ 'eee');
+}
+//ouput: 'aeee', 'beee', 'ceee' (on separate lines)
+```
+
+----
+## for-in loops
+[MDN documenation on for-in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+**This will be used much less often.**  If you use a for-in loop with an array of numbers or strings, you will output 
+a count: 0,1,2,3,4 for each element in the list.
+
+Example for-in loop using the same array and same 'do this code' as above for-of loop example,:
+```
+const array1 = ['a', 'b', 'c'];
+
+for (const element in array1) {
+  console.log(element+ 'eee');
+}
+//ouput: '0eee', '1eee', '2eee' (on separate lines)
+```
+Rather than accessing the values: `a`, `b`, `c`, the for-in loop iterated over the list, accessing the index of each value.
+```
+for (let property in object) {
+  // do something with object property
+}
+```
+```
+const obj = {a: 1, b: 2, c: 3};
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+}
+// expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
+However, for arrays, which are objects
+```
+const array2 = ['a', 'b', 'c']
+for (const letter in aray2) {
+  console.log(letter);
+}
+// ouput: 0 1 2 (on separate lines)
+```
+
+---
 ## Other iterators: .forEach(), .map(), .filter()
 
 ## .forEach : applies func to each item in array
@@ -134,7 +196,7 @@ or
 fruits.forEach(fruitItem => console.log('I want to eat a ' + fruitItem));
 ```
 
-
+---
 ## .map(): applies func to each item in array
 **returns a NEW list, which is altered by the func**
 ```
@@ -167,7 +229,7 @@ const smallNumbers = bigNumbers.map(bigNum =>{
 console.log(smallNumbers);  //output: [ 1, 2, 3, 4, 5 ]
 
 ```
-
+---
 ## .filter()
 **Returns a NEW array... altered from original as it takes out selected elements**
 1. instantantiate a new variable, with let or const

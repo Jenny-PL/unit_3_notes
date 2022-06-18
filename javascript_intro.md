@@ -2,7 +2,7 @@
 
 ## Functions
 
-**Note**: Javascript will let you not put in required parameters without throwing an error.  Istead those variables within the function will be 'undefined'.
+**Note**: Javascript will let you not put in required parameters without throwing an error.  Instead those variables within the function will be 'undefined'.
 
 ## Function Expressions
 ``` 
@@ -113,4 +113,5 @@ console.log(`Hi ${name}! How's it going?`);
 - [WesBos JS instruction](https://wesbos.com/javascript)  
 - [YouTubeChannel- fun fun function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)
 - [CodeCademy](https://www.codecademy.com/learn/introduction-to-javascript)
+- [MDN Documentation JS Review](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
