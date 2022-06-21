@@ -1,6 +1,8 @@
 # React
+[Programming with Mosh React Tutorial-3.5hrs](https://www.youtube.com/watch?v=Ke90Tje7VS0)  
+[Scrimba/YT React Course- 12hours!](https://www.youtube.com/watch?v=bMknfKXIFA8)
 
-**React** is a JS open source librar
+**React** is a JS open source library
 
 **why is React nice?**
 - Teamwork: Diff ppl can work on diff components... helps to share the workload and keep the code separate
@@ -14,6 +16,7 @@ These items are called **components**, and they are based on UI elements.
 ---
 
 [documentation for creating react app](https://create-react-app.dev/docs/getting-started/)   
+
 
 Steps to starting a react project:
 1. `yarn create react-app app-name` 
@@ -126,7 +129,7 @@ export default ComponentA;
 ```
 
 
-Example of passing several values into prop named Library:
+Example of passing several props (properties) into the Component named Library:
 ```
 const Library = () => {
   return (
@@ -146,10 +149,11 @@ const ComponentB = (props) => {
 ```
 or Instead of props.varName, we could alternatively use `props["varName"]`
 
+**Note: key is needed**.  A key is a unique identifier for each piece of data. In example below, e-mail is used as the key.
 ```
 const Student = (props) => {
   return (
-    <ul>
+    <ul key= {props.email}>
       {/* alternate ways to access property value: */}
       <li>Nickname: {props.name}</li>
       <li>Email: {props["email"]} </li>
@@ -159,10 +163,27 @@ const Student = (props) => {
 
 export default Student;
 ```
+---
+## Destructuring props:
+ Props (properties) can be passed into a Component's function all in one bundle as `props` or in a destructured way, in which only the props that will be used are passed in: `{ name, email}`.  If props are passed in as a bundle, they are accessed using `{props.name}` and `{props.email}`.  If they are destructured, they are accessed by simply using `{email}` or `{name}`
+
+---
+
+
 ## PropTypes
-1. Import PropTypes into our component file
-2. Attach a propTypes member to our component function
-3. Assign an object to the propTypes member, where each key-value pair in the object is a prop name and a validator
+1. Import PropTypes into our component file: `import PropTypes from 'prop-types';`
+2. Attach a propTypes member to our component function 
+   1. `propTypes` will be an instance variable
+   2. capitalization matters... check if `p` and `t` are properly cased in import statement, and within code block
+3. Assign an object to the propTypes member, where **each key-value pair in the object is a prop name and a validator**
+4. Some validator options:
+   1. **string**, **array**, **func**,**number**, **object**, **element** (example: react element like `<img />`)
+   2. **oneOf** example:  `name: PropTypes.oneOf(['Ada', 'Soo-ah', 'Chrissy'])`
+   3. **oneOfType** example: `name: PropTypes.oneOfType([PropTypes.string, PropTypes.number)`
+   4. **arrayOf** example: `PropTypes.arrayOf(PropTypes.number)`
+   5. **objectOf** example: `courses: PropTypes.objectOf(PropTypes.string)` This requires an object whose values must be strings
+   6. **shape** example: `student: PropTypes.shape({fullName: PropTypes.string, age: PropTypes.number})` This requires an object with specific fields and types
+5. PropTypes will give a warning in console if mis-typed... will not cause an error.  The warning message can be used to debug.
 
 ```
 import PropTypes from 'prop-types';
@@ -179,4 +200,13 @@ ComponentA.propTypes = {
 };
 
 export default ComponentA;
+```
+Other examples:  
+propTypes is a new instance variable (??)
+```
+ClassInfo.propTypes = {
+  numberStudents: Proptypes.number.isRequired,
+};
+
+export default ClassInfo;
 ```

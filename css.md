@@ -13,6 +13,18 @@ Link CSS sheet to HTML sheet within the `<head>` section.
     <link href="styles/style.css" rel="stylesheet">
 </head>
 ```
+---
+## General tid-bits:
+
+`.someClass {`    
+  `margin: 5pm 10px 3px 20px`  
+  `/* this goes clockwise! */`   
+  `}`  
+  If four values: **top - right- bottom- left**
+
+  If only two values:  **top/bottom, left/right**  
+  `.someClass {margin: 10px 20px }`  
+
 
 ---
 ## Classes:

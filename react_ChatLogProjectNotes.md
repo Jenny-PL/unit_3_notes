@@ -1,7 +1,7 @@
 # React Props
 
-
- ## React ChatLog project
+---
+ ## Notes for React ChatLog project
  - **Tip: to use debugger**:
    - type: `debugger;` into your code, then look at **sources** in inspection tab
  - You will need to create all components except TimeStamp
@@ -16,3 +16,5 @@ JSON data: list of objects
     "liked": false
   },]
   ```
+  ---
+  

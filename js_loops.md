@@ -135,7 +135,7 @@ for (const element of array1) {
 
 ----
 ## for-in loops
-[MDN documenation on for-in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+[MDN documenation on for-in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)  
 **This will be used much less often.**  If you use a for-in loop with an array of numbers or strings, you will output 
 a count: 0,1,2,3,4 for each element in the list.
 

@@ -24,6 +24,41 @@ function Example() {
 
 The **onClick** attributes indicate that `SomeElement` is listening for a click event. The … will be replaced with an event handler function (anonymous or named).
 
+Example:
+```
+const Post = () => {
+    const printMessage = () => {
+        console.log('Hello! We\'re in printMessage!');
+    };
+
+    return (
+        <section>
+            <button onClick={printMessage}>Like</button>
+        </section>
+    );
+};
+```
+Alternately, could use an anonymous function:
+```
+const Post = () => {
+    const printMessage = () => {
+        console.log('Hello! We\'re in printMessage!');
+    };
+
+    return (
+        <section>
+            <button onClick={() => printMessage()}>Like</button>
+        </section>
+    );
+};
+```
+**Watch out for this common mistake:**   
+Calling a function immediately within the `onClick` rather than **passing in the function**  
+
+This is wrong:  `<button onClick={printMessage()}>Like</button>` Do not call the button right away!
+
+---
+
 `[stateVariable, setStateVariable] = useState(initialValue)`  
 
 ## useState
