@@ -260,3 +260,6 @@ const myPromise = new Promise((resolve, reject) => {
     })
 })
 ```
+
+## using Async Await:
+[example with async await](https://axios-http.com/docs/example)
